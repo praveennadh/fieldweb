@@ -23,14 +23,15 @@
         }
         function track()
         {
-            navigator.geolocation.getCurrentPosition(function(position){
+            while(true)
+            {navigator.geolocation.getCurrentPosition(function(position){
                 var lat = position.coords.latitude;
                 var lon = position.coords.longitude;
                 document.getElementById('oplon').style.display='block';
                 document.getElementById('oplon').innerText=lon;
                 document.getElementById('oplat').style.display='block';
                 document.getElementById('oplat').innerText=lat;
-            });
+            });}
             var ila = document.getElementById('oplat').innerText;
             var ilo = document.getElementById('oplon').innerText;
 
